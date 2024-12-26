@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// // API routes for your wallet system
+// // API routes wallet system
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/wallets', [WalletController::class, 'index']);
 Route::get('/wallets/{id}', [WalletController::class, 'show']);
