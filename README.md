@@ -1,3 +1,38 @@
+Core Features
+Users: Each user can have multiple wallets.
+Wallet Types: Define attributes for wallets, such as name, minimum balance, and interest rates.
+Wallets: Belong to users and are of a specific type. Wallets maintain a balance.
+Transactions: Enable money transfers between wallets.
+
+Step 1: Understand Requirements
+Identify key entities:
+
+Users: Can own wallets.
+Wallets: Store balance and belong to a user.
+Wallet Types: Define the rules for a wallet.
+Transactions: Handle money movement between wallets.
+Define the relationships:
+
+A User has many Wallets.
+A Wallet belongs to a User and a Wallet Type.
+A Transaction records the transfer between two wallets.
+Step 2: Plan Database Structure
+The database will have four main tables:
+
+Users Table: Stores user information (e.g., name, email).
+Wallet Types Table: Stores attributes for wallet types.
+Wallets Table: Links wallets to users and wallet types, tracks balance.
+Transactions Table: Records details of wallet-to-wallet transfers.
+
+Step 3: Define Core Functionalities
+Retrieve all users.
+Retrieve all wallets.
+Retrieve wallet details, including its owner, type, and balance.
+Transfer money between wallets, ensuring:
+The sender wallet has sufficient balance.
+The transaction is atomic (both wallets are updated together).
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
